@@ -17,6 +17,10 @@ function caesarCipher(string, shift) {
   }
 
   for (let i = 0; i < word.length; i += 1) {
+    if (isSpecialChar(word[i])) {
+      continue;
+    }
+
     const LowerCase = isLowerCase(word[i]);
     const UpperCase = isUpperCase(word[i]);
 
@@ -48,6 +52,11 @@ function isLowerCase(letter) {
       return true;
   }
   return false;
+}
+
+function isSpecialChar(letter) {
+  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g;
+  return specialChars.test(letter);
 }
 
 export {
