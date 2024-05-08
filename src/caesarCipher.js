@@ -55,7 +55,7 @@ function isLowerCase(letter) {
 }
 
 function isSpecialChar(letter) {
-  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g;
+  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\s]/g;
   return specialChars.test(letter);
 }
 

@@ -31,3 +31,7 @@ test('returns correct upper cases', () => {
 test('returns correct punctuation', () => {
   expect(caesarCipher('!gIMba,l.')).toBe('!jLPed,o.');
 });
+
+test('returns empty spaces', () => {
+  expect(caesarCipher('? ! . WhAAt the hell???   ')).toBe('? ! . ZkDDw wkh khoo???   ');
+});
